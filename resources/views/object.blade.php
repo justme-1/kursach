@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('admin.layouts.layout')
 @section('content')
 
 {{--    цыкл для вывода слайдера и рядом лежащего--}}
@@ -15,7 +15,7 @@
         </ol>
         <div class="carousel-inner">
             @foreach(json_decode($subject->images) as $k=>$image)
-            <div class="carousel-item @if($k=='k'){{'active'}}@endif">
+            <div class="carousel-item @if($k=='k1'){{'active'}}@endif">
                 <img src="{{$image}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
 

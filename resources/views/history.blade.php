@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('admin.layouts.layout')
 @section('content')
 
     {{--    цыкл для вывода слайдера и рядом лежащего--}}

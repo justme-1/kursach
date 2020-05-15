@@ -1,8 +1,11 @@
 @extends('home')
 
 @section('home')
-    <form method="post" action="/userData/update" id="userData">
+
+    <div class="col-6 mx-auto" id="inf">
+    <form method="post" action="/userData/update" id="userData" enctype="multipart/form-data">
         <div class="form-row">
+            @csrf
             <div class="form-group col-md-6">
                 <label for="inputEmail4">почта</label>
                 <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email" value="{{$user->email}}">
@@ -28,10 +31,10 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">изменить</button>
     </form>
 
-
+    </div>
 
 
 @endsection
