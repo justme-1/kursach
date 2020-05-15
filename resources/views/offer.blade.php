@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('admin.layouts.layout')
 @section('content')
 
     <div class="row" id="content">
@@ -12,7 +12,7 @@
                             <span class="iconify" style="z-index: 100;position: absolute;left: 10px;top:10px;color: @if($subject->users()->where('id' !=Auth::user()->id)==Auth::user()){{'red'}} @else {{'white'}} @endif ;" data-icon="topcoat:like" data-inline="false"></span>
                         @endif
                         {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>--}}
-                        <img class="bd-placeholder-img card-img-top" src={{json_decode($subject->images)->k}}>
+                        <img class="bd-placeholder-img card-img-top" src={{json_decode($subject->images)->k1}}>
                         <div class="card-body">
                             <p class="card-text" style="font-size: smaller;overflow: hidden;height: 100px;">{{$subject->description}}</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -54,7 +54,7 @@
 
                 myPlacemark = new ymaps.Placemark([{{$subject->lat}}, {{$subject->long}}], {
                     // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-                    balloonContentHeader: "<img src='{{json_decode($subject->images)->k}}'>",
+                    balloonContentHeader: "<img src='{{json_decode($subject->images)->k1}}'>",
                     balloonContentBody: '{{$subject->description}}'.slice(0,100)+ {{$subject->price}},
                     balloonContentFooter: "<a href='/object/{{$subject->id}}'>страница объекта</a>",
                     hintContent: "Хинт метки"

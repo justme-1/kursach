@@ -23,7 +23,7 @@ class CreateSubjectUser extends Migration
         });
         Schema::table('subject_user',function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('subject_id')->references('id')->on('subjects');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

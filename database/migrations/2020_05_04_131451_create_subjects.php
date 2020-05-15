@@ -18,13 +18,13 @@ class CreateSubjects extends Migration
             $table->integer('user_id')->unsigned()->default(1)->nullable();
             $table->string('long')->nullable();
             $table->string('lat')->nullable();
-            $table->string('price');
-            $table->json('images');
-            $table->text('description');
+            $table->string('price')->default(0);
+            $table->json('images')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
         Schema::table('subjects', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

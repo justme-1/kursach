@@ -12,7 +12,7 @@ class SubjectSeeder extends Seeder
      */
     public function run()
     {
-        $images=['k'=>'/image/test.jpg','k1'=>'/image/test.jpg','k2'=>'/image/test.jpg','k3'=>'/image/test.jpg'];
+        $images=['k1'=>'/image/test.jpg','k2'=>'/image/test.jpg','k3'=>'/image/test.jpg','k4'=>'/image/test.jpg'];
         for($i=0;$i<10;$i++){
             $subject=new Subject;
             $user=User::find(($i%2)+1);
