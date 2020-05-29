@@ -17,7 +17,11 @@ class AdminController extends Controller
        }
         return view('index');
     }
-
+public function nonChecked()
+{
+    $subjects=Subject::where('checked',0)->paginate(5);
+    return view('admin.objectsNonChecked')->with(['subjects'=>$subjects]);
+}
 
     public function news(){
         if(Gate::allows('admin-enter')){
@@ -93,6 +97,17 @@ class AdminController extends Controller
         if(Gate::allows('admin-enter')){
 
             return view('admin.newsCreate');
+        }
+        return view('index');
+    }
+
+    public function Checked($id){
+        if(Gate::allows('admin-enter')){
+
+            $subject=Subject::find($id);
+            $subject->checked=1;
+            $subject->save();
+            return view('admin.admin');
         }
         return view('index');
     }

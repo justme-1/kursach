@@ -1,5 +1,5 @@
 @extends('admin.admin')
-
+news.blade.php
 @section('content')
     <h3>наши новости</h3>
     <h5>Добавляйте и изменяйте новости</h5>
@@ -22,7 +22,7 @@
         <tr id="{{$v->id}}">
             <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->id}}</a></td>
             <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->header}}</a></td>
-            <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->image}}</a></td>
+            <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light"><img src="{{$v->image}}" width="50px"/></a></td>
             <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->news}}</a></td>
             <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->author}}</a></td>
             <td><a href="/admin/newsUpdate/{{$v->id}}" class="badge badge-light">{{$v->news_short}}</a></td>

@@ -27,14 +27,14 @@
                 </div>
                 <div class="form-group">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">описание</label>
-                        <textarea class="form-control" name="news" id="exampleFormControlTextarea1" rows="3">{{$news->news}}</textarea>
+                        <label for="editor1">описание</label>
+                        <textarea class="form-control" name="news" id="editor1" rows="3">{{$news->news}}</textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">описание</label>
-                        <textarea class="form-control" name="news_short" id="exampleFormControlTextarea1" rows="3">{{$news->news_short}}</textarea>
+                        <label for="editor">краткое описание</label>
+                        <textarea class="form-control" name="news_short" id="editor" rows="3">{{$news->news_short}}</textarea>
                     </div>
                 </div>
 

@@ -28,6 +28,9 @@ Route::post('/admin/newsCreate','AdminController@newsCreate')->middleware('auth'
 Route::get('/admin/newsCreate','AdminController@newsCreatePage')->middleware('auth');
 Route::get('/admin/users','AdminController@users')->middleware('auth');
 Route::get('/admin/objects','AdminController@objects')->middleware('auth');
+Route::get('/admin/nonCheckedObjects','AdminController@nonChecked')->middleware('auth');
+Route::get('/admin/objectCheck/add/{id}','AdminController@Checked')->middleware('auth');
+Route::get('/admin/objectCheck/delete/{id}','AdminController@objectDelete')->middleware('auth');
 Route::get('/admin/object/{id}','AdminController@objectDelete')->middleware('auth');
 
 
@@ -58,3 +61,7 @@ Route::get('/welcome',function (){
 });
 
 Route::get('/history','HistoryController@index');
+Route::get('/services','aboutUsController@services');
+Route::get('/reward','aboutUsController@reward');
+Route::get('/partners','aboutUsController@partners');
+Route::get('/contacts','aboutUsController@contacts');

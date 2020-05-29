@@ -7,7 +7,7 @@ use App\Subject;
 class OfferController extends Controller
 {
     public function index(){
-        $subjects=Subject::all();
+        $subjects=Subject::where('checked',1)->get();
         return view('offer')->with(['subjects'=>$subjects]);
     }
     public function object(Request $Request,$id=null){
