@@ -7,8 +7,8 @@
                 <div class="form-row">
                     @csrf
                     <div class="form-group col-md-6">
-                        <label for="inputEmail">заголовок</label>
-                        <input type="text" class="form-control" name="header" id="inputEmail" placeholder="Email">
+                        <label for="header">заголовок</label>
+                        <input type="text" class="form-control" name="header" id="header" placeholder="Email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">автор</label>
@@ -27,14 +27,14 @@
                 </div>
                 <div class="form-group">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">описание</label>
-                        <textarea class="form-control" name="news" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="editor1">описание</label>
+                        <textarea class="form-control" name="news" id="editor1" rows="3"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">описание</label>
-                        <textarea class="form-control" name="news_short" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="editor">краткое описание</label>
+                        <textarea class="form-control" name="news_short" id="editor" rows="3"></textarea>
                     </div>
                 </div>
 

@@ -27,10 +27,11 @@
             </div>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">описание</label>
-                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{$subject->description}}</textarea>
+                    <label for="editor">описание</label>
+                    <textarea class="form-control" name="description" id="editor" rows="3">{{$subject->description}}</textarea>
                 </div>
             </div>
+
 
 
             <button type="submit" class="btn btn-primary">изменить</button>
@@ -51,7 +52,9 @@
             </div>
         </div>
     </div>
-
+    <script>
+        CKEDITOR.replace( 'editor' );
+    </script>
     {{--    цыкл для вывода слайдера и рядом лежащего--}}
 
 

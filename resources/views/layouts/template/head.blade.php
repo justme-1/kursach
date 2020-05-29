@@ -12,6 +12,7 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">
     <script href="js/app.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="/js/ckeditor/ckeditor.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a9ae969e-067e-4fde-ae5f-1731e874276a&lang=ru_RU" type="text/javascript">
     </script>
     <!-- Bootstrap core CSS -->

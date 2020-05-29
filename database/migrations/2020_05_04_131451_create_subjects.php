@@ -19,6 +19,7 @@ class CreateSubjects extends Migration
             $table->string('long')->nullable();
             $table->string('lat')->nullable();
             $table->string('price')->default(0);
+            $table->boolean('checked')->default(false);
             $table->json('images')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();

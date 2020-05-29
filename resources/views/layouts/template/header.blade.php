@@ -11,7 +11,7 @@
                     <a class="nav-link" href={{route('index')}}>Главная <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('offer')}}">предложения</a>
+                    <a class="nav-link" href="{{route('offer')}}">Предложения</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('news')}}" >Новости</a>
@@ -22,12 +22,9 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/history">история</a>
-                        <a class="dropdown-item" href="#">услуги</a>
-                        <a class="dropdown-item" href="#">награды</a>
+                        <a class="dropdown-item" href="/services">услуги</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">мемтонахождение</a>
-                        <a class="dropdown-item" href="#">партерство</a>
-                        <a class="dropdown-item" href="#">как с нами связаться</a>
+                        <a class="dropdown-item" href="/contacts">как с нами связаться</a>
 
                     </div>
                 </li>
