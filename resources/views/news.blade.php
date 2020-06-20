@@ -23,8 +23,17 @@
                 <div class="carousel-item">
                     <img src="{{$v->image}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>{{$v->header}}</h5>
-                        <p>{{$v->news_short}}</p>
+                        @if(App::isLocale('en'))
+                            <h5>{{$v->header}}</h5>
+                        @else
+                            <h5>{{$v->headerRu}}</h5>
+                        @endif
+                        <p class="lead"> {{$v->author}}</p>
+                        @if(App::isLocale('en'))
+                            <p class="lead"> {{$v->news_short}}</p>
+                        @else
+                            <p class="lead"> {{$v->news_shortRu}}</p>
+                        @endif
                     </div>
                 </div>
                 @endforeach
@@ -48,11 +57,19 @@
         <div class="row ourSuccess">
             <div class="col-9 mx-auto">
                 <div class="jumbotron">
-                    <img src="{{$v->image}}" class="rounded float-left w-20" style="margin-right: 20px;" alt="...">
+                    <img src="{{$v->image}}" class="rounded float-left w-20" width="200px" height="200px" style="margin-right: 20px;" alt="...">
+                    @if(App::isLocale('en'))
                     <h1>{{$v->header}}</h1>
+                    @else
+                        <h1>{{$v->headerRu}}</h1>
+                    @endif
                     <p class="lead"> {{$v->author}}</p>
-                    <p class="lead"> {{$v->news_short}}</p>
-                    <a class="btn btn-dark" href="/news/{{$v->id}}" role="button">посмотреть новость</a>
+                    @if(App::isLocale('en'))
+                        <p class="lead"> {{$v->news_short}}</p>
+                    @else
+                        <p class="lead"> {{$v->news_shortRu}}</p>
+                    @endif
+                    <a class="btn btn-dark" href="/news/{{$v->id}}" role="button">@lang('message.showNews')</a>
                 </div>
             </div>
         </div>

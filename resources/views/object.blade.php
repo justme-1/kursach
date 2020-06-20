@@ -47,7 +47,11 @@
         <div class="col-6">
 <h1>Важная информация</h1>
         <p>{{$subject->description}}</p>
-            <p>цена={{$subject->price}}$</p>
+            <p>аренда {{$subject->type->type}}</p>
+            <p>цена={{$subject->price}}рублей</p>
+            <p>площадь={{$subject->area}}</p>
+            <p>количество комнат={{$subject->rooms}}</p>
+
     </div>
     </div>
 <div class="row">

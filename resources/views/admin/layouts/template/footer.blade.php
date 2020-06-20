@@ -1,9 +1,4 @@
-{{--<footer class="footer mt-auto py-3">--}}
-{{--    <div class="container">--}}
-{{--        <span class="text-muted">Place sticky footer content here.</span>--}}
-{{--    </div>--}}
-{{--</footer>--}}
-<!-- jQuery library -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Popper JS -->

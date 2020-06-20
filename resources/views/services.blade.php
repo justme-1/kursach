@@ -58,9 +58,9 @@
             <div class="col-9 mx-auto">
                 <div class="jumbotron">
                     <img src="/image/partners.jpg" class="rounded float-left w-25" style="margin-right: 20px;" alt="...">
-                    <h1>запускаем программу партнерства</h1>
-                    <p class="lead"> множество программ , найди свою</p>
-                    <a class="btn btn-dark" href="#" role="button">посмотреть программы</a>
+                    <h1>@lang('messages.startPartners1')</h1>
+                    <p class="lead"> @lang('messages.partnersContent1')</p>
+                    <a class="btn btn-dark" href="#" role="button">@lang('messages.partnersShowProgram')</a>
                 </div>
             </div>
         </div>
@@ -68,9 +68,9 @@
         <div class="col-9 mx-auto">
             <div class="jumbotron">
                 <img src="/image/apart.jpg" class="rounded float-left w-20" style="margin-right: 20px;" alt="...">
-                <h1> мы сдадим вашу недвижимость быстрее</h1>
-                <p class="lead"> множество различных предложений</p>
-                <a class="btn btn-dark" href="#" role="button">посмотреть программы</a>
+                <h1>@lang('messages.startPartners2')</h1>
+                <p class="lead"> @lang('messages.partnersContent2')</p>
+                <a class="btn btn-dark" href="#" role="button">@lang('messages.partnersShowProgram')</a>
             </div>
         </div>
     </div>
@@ -78,9 +78,9 @@
         <div class="col-9 mx-auto">
             <div class="jumbotron">
                 <img src="/image/test.jpg" class="rounded float-left w-20" style="margin-right: 20px;" alt="...">
-                <h1>новые услуги скоро</h1>
-                <p class="lead"> множество программ , найди свою</p>
-                <a class="btn btn-dark" href="#" role="button">посмотреть программы</a>
+                <h1>@lang('messages.startPartners3')</h1>
+                <p class="lead"> @lang('messages.partnersContent3')</p>
+                <a class="btn btn-dark" href="#" role="button">@lang('messages.partnersShowProgram')</a>
             </div>
         </div>
     </div>

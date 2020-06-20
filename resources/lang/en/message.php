@@ -1,0 +1,51 @@
+<?php
+
+return [
+
+
+    'main' => 'Main',
+    'offer' => 'Offer',
+    'news' => 'News',
+    'aboutUs' => 'About us',
+    'history' => "History",
+    'services' => "Services",
+    'contacts' => "Contacts",
+    'cabinet' => "cabinet",
+    'exit' => "Exit",
+    'enter' => "Enter",
+    'registration' => "registration",
+    'mainFirstSlideHeader' => "main first slide header",
+    'mainFirstSlideContent' => "main First Slide Content",
+    'mainSecondSlideHeader' => "main Second Slide Header",
+    'mainSecondSlideContent' => "main Second Slide Content",
+    'mainThirdSlideHeader' => "main Third Slide Header",
+    'mainThirdSlideContent' => "main Third Slide Content",
+    'ourSuccess' => "our Success",
+    'ourSuccessContent' => "It should not, however, be forgotten that the existing structure of the organization requires the definition and refinement of systems of mass participation. Everyday practice shows that the strengthening and development of the structure plays an important role in shaping the development model. Similarly, consultation with a broad asset ensures a wide circle of (specialists) participation in the formation of significant financial and administrative conditions.",
+    'partners' => "partners",
+    'find' => "find",
+    'chooseType' => "choose Type",
+    'choosePriceBefore' => "choose price",
+    'choosePriceAfter' => "choose price",
+    'chooseRooms' => "choose rooms",
+    'chooseArea' => "choose area",
+    'chooseApartment' => "Apartment",
+    'chooseHouse' => "House",
+    'chooseLand' => "Land",
+    'chooseCommercial' => "Commercial",
+    'feedback' => "feedback",
+    'showNews'=>"show news",
+    'price'=>"price",
+    'area'=>"area",
+    'startPartners1'=>"launch partnership program",
+    'partnersContent1'=>"many programs, find your",
+    'partnersShowProgram'=>"
+view programs",
+    'startPartners2'=>"new services coming soon",
+    'partnersContent2'=>"
+many programs, find your",
+    'startPartners3'=>"we will hand over your property faster",
+    'partnersContent3'=>"
+many different offers",
+'view'=>'view',
+];

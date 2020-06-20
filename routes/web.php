@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    App::setLocale(session('locale'));
     return view('index');
 });
 
@@ -37,6 +38,11 @@ Route::get('/admin/object/{id}','AdminController@objectDelete')->middleware('aut
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/logout', 'HomeController@logOut');
 Route::get('/home/objects', 'HomeController@objects');
+Route::get('/filter', 'OfferController@ajax');
+
+
+Route::get('/locale/{loc}', 'HomeController@locale');
+
 Route::get('/home/object/{id}', 'HomeController@object');
 Route::get('/home/addObject', 'HomeController@addObjectPage');
 Route::post('/object/add', 'HomeController@addObject');
@@ -46,14 +52,17 @@ Route::post('/object/delete/{id}', 'HomeController@deleteObject');
 
 Route::post('/userData/update','HomeController@updateUserData');
 
+Route::post('/home/objectFilter', 'OfferController@objectsFilter');
 Route::get('/offer', 'OfferController@index')->name('offer');
+Route::get('/object/{id}','OfferController@object');
 
 Route::get('/index', function (){
+    App::setLocale(session('locale'));
     return view('index');
 })->name('index');
 
 
-Route::get('/object/{id}','OfferController@object');
+
 Route::get('/news','NewsController@index')->name('news');
 Route::get('/news/{id}','NewsController@getOne');
 Route::get('/welcome',function (){

@@ -36,6 +36,12 @@
 {{--                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>--}}
 {{--                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log in</button>--}}
 {{--            </form>--}}
+            @if(session('lang')=='ru')
+                <a class="btn btn-outline-success my-2 my-sm-0"href="{{ url('/home') }}">en</a>
+            @else
+                <a class="btn btn-outline-success my-2 my-sm-0"href="{{ url('/home') }}">ru</a>
+            @endif
+
             @if (Route::has('login'))
                 <div class="top-right links form-inline mt-2 mt-md-0">
                     @auth

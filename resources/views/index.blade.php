@@ -11,25 +11,25 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/test.jpg" class="d-block w-100" alt="...">
+                <img src="/image/test.jpg" class="d-block w-100" alt="aaa">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h5>@lang('message.mainFirstSlideHeader')</h5>
+                    <p>@lang('message.mainFirstSlideContent')</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="image/test.jpg" class="d-block w-100" alt="...">
+                <img src="/image/test.jpg" class="d-block w-100" alt="aaa">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5>@lang('message.mainSecondSlideHeader')</h5>
+                    <p>@lang('message.mainSecondSlideContent')</p>
                 </div>
             </div>
 {{--            цыкл для вывода слайдов--}}
             <div class="carousel-item">
-                <img src="image/test.jpg" class="d-block w-100" alt="...">
+                <img src="/image/test.jpg" class="d-block w-100" alt="aaa">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h5>@lang('message.mainThirdSlideHeader')</h5>
+                    <p>@lang('message.mainThirdSlideContent')</p>
                 </div>
             </div>
         </div>
@@ -43,14 +43,13 @@
         </a>
     </div>
     </div>
-
 {{--    цыкл для вывода слайдера и рядом лежащего--}}
 <div class="row ourSuccess">
     <div class="col-9 mx-auto">
         <div class="jumbotron">
-            <h1>Наши успехи</h1>
-            <p class="lead">Не следует, однако забывать, что сложившаяся структура организации требуют определения и уточнения систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры играет важную роль в формировании модели развития. Равным образом консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий.</p>
-            <a class="btn btn-dark" href="" role="button">партнерство</a>
+            <h1>@lang('message.ourSuccess')</h1>
+            <p class="lead">@lang('message.ourSuccessContent')</p>
+            <a class="btn btn-dark" href="" role="button">@lang('message.partners')</a>
         </div>
     </div>
 </div>

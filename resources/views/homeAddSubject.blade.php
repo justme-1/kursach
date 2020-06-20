@@ -11,8 +11,29 @@
                     <input type="text" class="form-control" name="price" id="inputEmail" placeholder="цена" value="">
                 </div>
                 <div class="form-group col-md-6">
+                    <label for="type">выберете тип</label>
+                    <select class="custom-select" name="type" id="type" >
+
+                        <option value="1">квартира</option>
+                        <option value="2">дом</option>
+                        <option value="3">участок</option>
+                        <option value="4">комерческая</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rooms">введите количество комнат</label>
+                    <input type="text" class="form-control" name="rooms" id="rooms" placeholder="" >
+                </div>
+
+
+                <div class="form-group col-md-6">
+                    <label for="area">введите площадь</label>
+                    <input type="text" class="form-control" name="area" id="area" placeholder="">
+                </div>
+
+                <div class="form-group col-md-6">
                     <label for="inputPassword4">добавить изображение</label>
-                    <input type="file" class="form-control" name="image" placeholder="image">
+                    <input type="file" class="form-control" multiple name="image[]" placeholder="image">
                 </div>
             </div>
             <div class="form-row">
@@ -27,11 +48,16 @@
             </div>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="editor">описание</label>
+                    <label for="editor">описание eng</label>
                     <textarea class="form-control" name="description" id="editor" rows="3"></textarea>
                 </div>
             </div>
-
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="editor">описание на русском</label>
+                    <textarea class="form-control" name="descriptionRu" id="editor1" rows="3"></textarea>
+                </div>
+            </div>
 
             <button type="submit" class="btn btn-primary">добавить</button>
         </form>
@@ -53,6 +79,7 @@
 
     <script>
         CKEDITOR.replace( 'editor' );
+        CKEDITOR.replace( 'editor1' );
     </script>
 
 

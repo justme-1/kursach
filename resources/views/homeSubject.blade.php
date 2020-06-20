@@ -10,9 +10,32 @@
                     <label for="inputEmail">цена</label>
                     <input type="text" class="form-control" name="price" id="inputEmail" placeholder="Email" value="{{$subject->price}}">
                 </div>
+
                 <div class="form-group col-md-6">
-                    <label for="inputPassword4">добавить изображение</label>
-                    <input type="file" class="form-control" multiple name="image" placeholder="image">
+                    <label for="type">выберете тип</label>
+                    <select class="custom-select" name="type" id="type" >
+
+                        <option <?if($subject->type_id==1) echo 'selected';?> value="1">квартира</option>
+                        <option <?if($subject->type_id==2) echo 'selected';?>  value="2">дом</option>
+                        <option <?if($subject->type_id==3) echo 'selected';?>  value="3">участок</option>
+                        <option <?if($subject->type_id==4) echo 'selected';?>  value="4">комерческая</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rooms">введите количество комнат</label>
+                    <input type="text" class="form-control" name="rooms" id="rooms" placeholder="" value="{{$subject->rooms}}">
+                </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label for="area">введите площадь</label>
+                        <input type="text" class="form-control" name="area" id="area" placeholder="" value="{{$subject->area}}">
+                    </div>
+
+
+                <div class="form-group col-md-6">
+                    <label for="image">добавить изображение</label>
+                    <input type="file" class="form-control" multiple name="image[]" placeholder="image">
                 </div>
             </div>
             <div class="form-row">
@@ -27,8 +50,14 @@
             </div>
             <div class="form-group">
                 <div class="form-group">
-                    <label for="editor">описание</label>
+                    <label for="editor">описание на английском</label>
                     <textarea class="form-control" name="description" id="editor" rows="3">{{$subject->description}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="editor">описание на русском</label>
+                    <textarea class="form-control" name="descriptionRu" id="editor1" rows="3">{{$subject->descriptionRu}}</textarea>
                 </div>
             </div>
 
@@ -54,9 +83,9 @@
     </div>
     <script>
         CKEDITOR.replace( 'editor' );
+        CKEDITOR.replace( 'editor1' );
     </script>
     {{--    цыкл для вывода слайдера и рядом лежащего--}}
-
 
 
 

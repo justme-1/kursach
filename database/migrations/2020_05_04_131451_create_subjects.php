@@ -14,18 +14,26 @@ class CreateSubjects extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('user_id')->unsigned()->default(1)->nullable();
             $table->string('long')->nullable();
             $table->string('lat')->nullable();
-            $table->string('price')->default(0);
+            $table->integer('price')->default(0);
             $table->boolean('checked')->default(false);
             $table->json('images')->nullable();
             $table->text('description')->nullable();
+            $table->text('descriptionRu')->nullable();
+            $table->integer('area');
+            $table->integer('rooms');
+            $table->unsignedInteger('type_id')->default(1);
             $table->timestamps();
         });
         Schema::table('subjects', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+        });
+        Schema::table('subjects', function (Blueprint $table) {
+        $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
